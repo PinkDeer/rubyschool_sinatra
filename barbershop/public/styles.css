@@ -1,0 +1,12 @@
+body {
+  font-family: Arial;
+}
+
+.something {
+  background: blue;
+  color: white;
+}
+
+#slogan {
+  background-color: yellow;
+}
