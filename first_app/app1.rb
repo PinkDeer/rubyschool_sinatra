@@ -4,22 +4,22 @@ get '/' do
   erb :index
 end
 
-get '/contacts' do
-  @title = 'Contacts'
-  @message = 'Phone number: 12313123'
+def under_construction
+  @title = 'Under constructio'
+  @message = 'This page is Uunder construction'
   erb :message
+end
+
+get '/contacts' do
+  under_construction
 end
 
 get '/faq' do
-  @title = 'FAQ'
-  @message = 'Under construction'
-  erb :message
+  under_construction
 end
 
 get '/something' do
-  @title = 'something'
-  @message = 'Bla bla'
-  erb :message
+  under_construction
 end
 
 post '/' do
