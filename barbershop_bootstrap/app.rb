@@ -20,6 +20,21 @@ post '/visit' do
   @barber = params[:barber]
   @color = params[:color]
 
+  # validaion ver 1
+
+  hh = {  :username => 'Введите имя',
+          :phone => 'Введите номер телефона',
+          :datetime => 'Введите дату и время'}
+
+  @error = hh.select {|key,_| params[key] == ""}.values.join(", ")
+
+  if @error != ''
+    return erb :visit
+  end
+
+  # validaion ver 2
+
+=begin
   # хэш
   hh = {  :username => 'Введите имя',
           :phone => 'Введите номер телефона',
@@ -41,6 +56,9 @@ post '/visit' do
     end
 
   end
+=end
+
+# validaion ver 3
 
 =begin
   if @username == ''
