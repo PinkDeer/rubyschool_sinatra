@@ -1,18 +1,17 @@
-<table class="table table-striped">
+ <%= @results %>
 
-  <tr>
-    <td>a</td>
-    <td>b</td>
-  </tr>
+<table class="table">
 
-  <tr>
-    <td>c</td>
-    <td>d</td>
-  </tr>
+   <% @results.each do |row| %>
 
-  <tr>
-    <td>a</td>
-    <td>b</td>
-  </tr>
+      <tr>
+        <td><%= row['username'] %></td>
+        <td><%= row['phone'] %></td>
+        <td><%= row['datestamp'] %></td>
+        <td><%= row['barber'] %></td>
+        <td><%= row['color'] %></td>
+    </tr>
+
+  <% end %>
 
 </table>
