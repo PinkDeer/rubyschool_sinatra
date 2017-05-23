@@ -84,5 +84,12 @@ post '/visit' do
   end
 =end
 
+  db = get_db
+  db.execute 'insert into Users (username, phone, datestamp, barber, color) values (?, ?, ?, ?, ?)', [@username, @phone, @datetime, @barber, @color]
+
   erb "Ok, #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
+end
+
+def get_db
+  return SQLite3::Database.new 'barbershop.db'
 end
