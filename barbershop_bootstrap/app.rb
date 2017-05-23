@@ -90,6 +90,10 @@ post '/visit' do
   erb "Ok, #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
 end
 
+get '/showusers' do
+  erb :showusers
+end
+
 def get_db
   return SQLite3::Database.new 'barbershop.db'
 end
