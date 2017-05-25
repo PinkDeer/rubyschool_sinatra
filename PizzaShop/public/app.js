@@ -1,4 +1,0 @@
-function something()
-{
-  alert('Hello!');
-}
